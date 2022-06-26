@@ -6,7 +6,6 @@ import classes from "./navbar.module.css";
 const NavBar = () => {
   const [show, setShow] = useState(false);
   const handleClick = () => {
-    console.log("clicked");
     setShow((prev) => (prev ? false : true));
   };
 
@@ -14,13 +13,13 @@ const NavBar = () => {
     <>
       <div className={`${classes.navbar} ${classes.active}`}>
         <span className={classes.heading}>Praveenkumar</span>
-        <NavLink to="/">
+        <NavLink to="/" className={classes.link}>
           <span className={classes.content}>Home</span>
         </NavLink>
-        <NavLink to="about">
+        <NavLink to="about" className={classes.link}>
           <span className={classes.content}>About</span>
         </NavLink>
-        <NavLink to="contact">
+        <NavLink to="contact" className={classes.link}>
           <span className={classes.content}>Contact</span>
         </NavLink>
       </div>
@@ -32,13 +31,22 @@ const NavBar = () => {
       </div>
       {show && (
         <div className={classes.mobile_column}>
-          <NavLink to="/" className={classes.content_mobile}>
+          <NavLink
+            to="/"
+            className={`${classes.content_mobile} ${classes.link}`}
+          >
             <div onClick={handleClick}>Home</div>
           </NavLink>
-          <NavLink to="/about" className={classes.content_mobile}>
+          <NavLink
+            to="/about"
+            className={`${classes.content_mobile} ${classes.link}`}
+          >
             <div onClick={handleClick}>About</div>
           </NavLink>
-          <NavLink to="/contact" className={classes.content_mobile}>
+          <NavLink
+            to="/contact"
+            className={`${classes.content_mobile} ${classes.link}`}
+          >
             <div onClick={handleClick}>Contact</div>
           </NavLink>
         </div>
