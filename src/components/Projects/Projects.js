@@ -90,34 +90,6 @@ const Projects = () => {
               <h3 className={classes.project_heading}>Todo App</h3>
             </div>
           </a>
-          <a
-            href="https://e-library-4804e4.netlify.app/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <div className={classes.project}>
-              <img
-                src={require("./../assets/e-library.png")}
-                alt="e-library"
-                className={classes.img}
-              />
-              <h3 className={classes.project_heading}>E-Library</h3>
-            </div>
-          </a>
-          <a
-            href="https://tic-tac-toe-ttt.netlify.app/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <div className={classes.project}>
-              <img
-                src={require("./../assets/tictactoe.png")}
-                alt="tictactoe"
-                className={classes.img}
-              />
-              <h3 className={classes.project_heading}>Tic Tac Toe Game</h3>
-            </div>
-          </a>
         </div>
       </div>
     </>
